@@ -1,6 +1,6 @@
 \documentclass[oneside,11pt]{book}
 
-\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage[letterpaper, landscape, top=1in, bottom=1in, left=1in, right=1in]{geometry}
 \usepackage{parskip}            % Disables indentation at paragraph breaks
 \usepackage{palatino}
 \usepackage[]{units}
@@ -8,20 +8,29 @@
 \newcommand{\Ingredients}[1]{
     \subsection*{Ingredients}
     \begin{itemize} 
-      #1 
+        #1 
     \end{itemize}
 }
 
 \newcommand{\Directions}[1]{
     \subsection*{Directions}
     \begin{enumerate} 
-      #1 
+        #1 
     \end{enumerate}
 }
 
-\newcommand{\recipe}[1]{
+\newcommand{\recipe}[3]{
+	\pagebreak
     \section*{ \hspace{-12pt} #1 }
     \addcontentsline{toc}{section}{ \hspace{-6pt} #1 }
+	
+	\begin{minipage}[t]{0.35\textwidth}
+	    #2
+	\end{minipage}
+	\hspace{0.05\textwidth}
+	\begin{minipage}[t]{0.6\textwidth}
+	    #3
+	\end{minipage}
 }
 
 \title{\bf \Huge Recipes}
@@ -33,7 +42,7 @@
 \tableofcontents{}
 
 \chapter{Breakfast}
-    \recipe{Crepes}
+    \recipe{Crepes}{
         \Ingredients{
             \item 2 large eggs
             \item 3/4 cup milk
@@ -42,7 +51,7 @@
             \item 3 tablespoons melted butter
             \item Butter, for coating the pan
         }
-        
+	}{
         \Directions{
             \item In a blender, combine all of the ingredients and pulse for 10 seconds. 
                 Place the crepe batter in the refrigerator for 1 hour. 
@@ -59,8 +68,9 @@
             \item Savory Variation: Add 1/4 teaspoon salt and 1/4 cup chopped fresh herbs, spinach or sun-dried tomatoes to the egg mixture.
             \item Sweet Variation: Add 21/2 tablespoons sugar, 1 teaspoon vanilla extract and 2 tablespoons of your favorite liqueur to the egg mixture.
         }
+	}
     
-    \recipe{Buttermilk Pancakes}
+    \recipe{Buttermilk Pancakes}{
         \Ingredients{
             \item 1 1/2 cups all purpose flour
             \item 3 tablespoons sugar
@@ -72,7 +82,7 @@
             \item 2 eggs
             \item (1/2 teaspoon vanilla extract)
         }
-        
+	}{
         \Directions{
             \item Mix together the dry ingredients and wet ingredients in separate bowls.
             \item Grease a skillet lightly with butter or oil and do so as needed between batches. 
@@ -80,9 +90,10 @@
             \item Mix the liquid quickly into the dry ingredients.
             \item Use 1/4 cup batter for each pancake. When bubbles appear on the surface on the pancake and the edges have browned, turn the cake and cook only until the second side is done.
         }
+	}
 
 \chapter{Dinner}
-    \recipe{Chicken Tikka Masala}
+    \recipe{Chicken Tikka Masala}{
         \Ingredients{
             \item 2 tablespoons Ghee or butter
             \item 2 tablespoons ghee (clarified butter)
@@ -104,7 +115,7 @@
             \item 1/2 teaspoon salt, or to taste
             \item 1 teaspoon white sugar, or to taste
         }
-        
+	}{
         \Directions{
             \item Heat ghee in a large skillet over medium heat and cook and stir onion until translucent, about 5 minutes. 
                 Stir in garlic; cook and stir just until fragrant, about 1 minute. 
@@ -118,8 +129,9 @@
                 Transfer chicken and any pan juices into the sauce. 
                 Simmer chicken in sauce until no longer pink, about 30 minutes; adjust salt and sugar to taste.
         }
-		
-	\recipe{Jambalaya}
+	}
+	
+	\recipe{Jambalaya}{
 	    \Ingredients{
 			\item 2 tablespoons vegetable oil
 			\item 1/2 pound andouille or other smoked sausage, cut into 1/2-inch slices
@@ -137,7 +149,7 @@
 			\item 3/4 cup uncooked rice
 			\item 1/2 pound shrimp, peeled, deveined and cut in half lengthwise
 		}
-		
+	}{
 		\Directions{
 			\item Heat oil in a large heavy saucepan or Dutch oven over medium-high heat. 
 				Add sausage, celery, onion, bell pepper, and garlic. 
@@ -149,8 +161,9 @@
 			\item Let stand, covered, 10 minutes. 
 				Remove bay leaf before serving.
 		}
+	}
     
-    \recipe{Pan-Roasted Soardfish Steaks}
+    \recipe{Pan-Roasted Soardfish Steaks}{
         \Ingredients{
             \item 1/4 cup (1/2 stick) butter, room temperature
             \item 2 teaspoons chopped fresh parsley
@@ -160,7 +173,7 @@
             \item 1 tablespoon olive oil
             \item 4 1-inch-thick swordfish fillets (about 6 ounces each)
         }
-        
+	}{
         \Directions{
             \item Preheat oven to 400°F. 
             \item Mash butter, parsley, garlic, 1/2 teaspoon ground mixed peppercorns, and lemon peel in small bowl. 
@@ -176,8 +189,9 @@
                 Cook over medium-high heat, scraping up browned bits, until melted and bubbling. 
                 Pour butter sauce over swordfish and serve.
         }
-    
-    \recipe{Saag Paneer}
+    }
+	
+    \recipe{Saag Paneer}{
         \Ingredients{
             \item 1 teaspoon turmeric
             \item 1/2 teaspoon cayenne
@@ -194,7 +208,7 @@
             \item 1 teaspoon ground cumin
             \item 1/2 cup plain yogurt, stirred until smooth
         }
-      
+	}{
         \Directions{
             \item In a large bowl, whisk together the turmeric, cayenne, 1 teaspoon salt and 3 tablespoons oil. 
                 Gently, drop in the cubes of paneer and gently toss, taking care not to break the cubes if you're using the homemade kind. 
@@ -219,8 +233,9 @@
                 Once the yogurt is well mixed into the spinach, add the paneer. 
                 Turn the heat back on, cover and cook until everything is warmed through, about 5 minutes. Serve.
         }
-        
-    \recipe{Thai Red Curry}
+    }
+	
+    \recipe{Thai Red Curry}{
         \Ingredients{
             \item 1 1/4 cups brown jasmine rice or long-grain brown rice, rinsed
             \item 1 tablespoon coconut oil or olive oil
@@ -240,7 +255,7 @@
             \item 2 teaspoons rice vinegar or fresh lime juice
             \item Garnishes/sides: handful of chopped fresh basil or cilantro, optional red pepper flakes, optional sriracha or chili garlic sauce
         }
-        
+	}{
         \Directions{
             \item To cook the rice, bring a large pot of water to boil. 
                 Add the rinsed rice and continue boiling for 30 minutes, reducing heat as necessary to prevent overflow. 
@@ -263,8 +278,9 @@
                 Divide rice and curry into bowls and garnish with chopped cilantro and a sprinkle of red pepper flakes, if you'd like. 
                 If you love spicy curries, serve with sriracha or chili garlic sauce on the side
         }
-    
-    \recipe{Whole Roasted Red Snapper}
+    }
+	
+    \recipe{Whole Roasted Red Snapper}{
         \Ingredients{
             \item 4-pound whole red snapper, head on, scales removed and cleaned
             \item 1/3 cup canola oil
@@ -278,7 +294,7 @@
             \item 1/4 cup cilantro chiffonnade
             \item fine sea salt and freshly ground black pepper 1 lime
         }
-        
+	}{
         \Directions{
             \item Preheat oven to 400°F.
             \item Generously season inside the belly and both sides of the fish with salt and pepper. 
@@ -299,9 +315,10 @@
                 Plate the remaining fillets and spoon some of the sauce from the roasting pan over each portion. 
                 Finish each dish with a squeeze of fresh lime juice and garnish with chiffonade of basil and cilantro.
         }
-        
+    }
+    
 \chapter{Dessert}
-    \recipe{Chocolate Lava Cake}
+    \recipe{Chocolate Lava Cake}{
         \Ingredients{
             \item 6 (1-ounce) squares bittersweet chocolate
             \item 2 (1-ounce) squares semisweet chocolate
@@ -313,7 +330,7 @@
             \item 1 teaspoon vanilla extract
             \item 2 tablespoons orange liqueur
         }
-    
+	}{
         \Directions{
             \item Preheat oven to 425 degrees F. Grease 6 (6-ounce) custard cups. 
             \item Melt the chocolates and butter in the microwave, or in a double boiler. 
@@ -324,8 +341,9 @@
                 The edges should be firm but the center will be runny. 
                 Run a knife around the edges to loosen and invert onto dessert plates.
         }
-  
-    \recipe{Tiramisu}
+    }
+	
+    \recipe{Tiramisu}{
         \Ingredients{
             \item 6 egg yolks 
             \item 3/4 cup white sugar 
@@ -338,7 +356,7 @@
             \item 2 (3 ounce) packages ladyfinger cookies 
             \item 1 tablespoon unsweetened cocoa powder
         }
-        
+	}{
         \Directions{
             \item In a medium saucepan, whisk together egg yolks and sugar until well blended. 
                 Whisk in milk and cook over medium heat, stirring constantly, until mixture boils. 
@@ -352,5 +370,6 @@
                 Spread half of mascarpone mixture over ladyfingers, then half of whipped cream over that. 
                 Repeat layers and sprinkle with cocoa. Cover and refrigerate 4 to 6 hours, until set.
         }
-
+    }
+	
 \end{document}
