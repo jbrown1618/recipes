@@ -1,7 +1,8 @@
-\documentclass[oneside,11pt]{book}
+\documentclass[oneside,10pt]{book}
 
-\usepackage[letterpaper, landscape, top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[letterpaper, portrait, top=1in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
 \usepackage{parskip} % Disables indentation at paragraph breaks
+\usepackage{hyperref} % Enable hyperlinks for recipe sources
 \usepackage{palatino} % Prettier font
 \usepackage[]{units}
 
@@ -19,17 +20,23 @@
     \end{enumerate}
 }
 
-\newcommand{\recipe}[3]{
-    \pagebreak
-    \section*{ \hspace{-12pt} #1 }
+%
+% 1 - Name
+% 2 - Source
+% 3 - Ingredients
+% 4 - Directions
+%
+\newcommand{\recipe}[4]{
+    % \pagebreak
+    \section*{ \hspace{-12pt} #1 {\hfill \normalsize \normalfont from #2}}
     \addcontentsline{toc}{section}{ \hspace{-6pt} #1 }
     
     \begin{minipage}[t]{0.35\textwidth}
-        #2
+        #3
     \end{minipage}
     \hspace{0.05\textwidth}
     \begin{minipage}[t]{0.6\textwidth}
-        #3
+        #4
     \end{minipage}
 }
 
