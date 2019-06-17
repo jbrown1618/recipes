@@ -6,39 +6,7 @@
 \usepackage{palatino} % Prettier font
 \usepackage[]{units}
 
-\newcommand{\Ingredients}[1]{
-    \subsection*{Ingredients}
-    \begin{itemize} 
-        #1 
-    \end{itemize}
-}
-
-\newcommand{\Directions}[1]{
-    \subsection*{Directions}
-    \begin{enumerate} 
-        #1 
-    \end{enumerate}
-}
-
-%
-% 1 - Name
-% 2 - Source
-% 3 - Ingredients
-% 4 - Directions
-%
-\newcommand{\recipe}[4]{
-    % \pagebreak
-    \section*{ \hspace{-12pt} #1 {\hfill \normalsize \normalfont from #2}}
-    \addcontentsline{toc}{section}{ \hspace{-6pt} #1 }
-    
-    \begin{minipage}[t]{0.35\textwidth}
-        #3
-    \end{minipage}
-    \hspace{0.05\textwidth}
-    \begin{minipage}[t]{0.6\textwidth}
-        #4
-    \end{minipage}
-}
+\input{recipe-utils.tex}
 
 \title{\bf \Huge Recipes}
 \author{Collected by Josh Brown and Sharon Yao}
@@ -55,18 +23,24 @@
     \input{list/granola.tex}
     \input{list/green-smoothie.tex}
 
-\chapter{Dinner}
-    \input{list/chicken-tikka-masala.tex}
+\chapter{Asian}
     \input{list/cumin-lamb.tex}
-    \input{list/jambalaya.tex}
+    \input{list/thai-red-curry.tex}
+
+\chapter{Indian}
+    \input{list/chicken-tikka-masala.tex}
     \input{list/lamb-curry.tex}
+    \input{list/saag-paneer.tex}
+
+\chapter{Italian}
+    \input{list/pasta-puttanesca.tex}
+
+\chapter{Seafood}
+    \input{list/jambalaya.tex}
     \input{list/moroccan-shrimp.tex}
     \input{list/pan-fried-whole-fish.tex}
     \input{list/pan-roasted-swordfish-steaks.tex}
-    \input{list/pasta-puttanesca.tex}
-    \input{list/saag-paneer.tex}
     \input{list/seared-sea-bass.tex}
-    \input{list/thai-red-curry.tex}
     \input{list/whole-roasted-red-snapper.tex}
 
 \chapter{Sides}
