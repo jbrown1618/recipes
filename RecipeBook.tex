@@ -1,0 +1,56 @@
+\documentclass[oneside,10pt]{book}
+
+\usepackage[letterpaper, portrait, top=1in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{parskip} % Disables indentation at paragraph breaks
+\usepackage{hyperref} % Enable hyperlinks for recipe sources
+\usepackage{palatino} % Prettier font
+\usepackage[]{units}
+
+\input{recipe-utils.tex}
+
+\title{\bf \Huge Recipes}
+\author{Collected by Josh Brown and Sharon Yao}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents{}
+
+\chapter{Breakfast}
+    \input{recipes/breakfast-cookies.tex}
+    \input{recipes/buttermilk-pancakes.tex}
+    \input{recipes/crepes.tex}
+    \input{recipes/granola.tex}
+    \input{recipes/green-smoothie.tex}
+
+\chapter{Asian}
+    \input{recipes/cumin-lamb.tex}
+    \input{recipes/thai-red-curry.tex}
+
+\chapter{Indian}
+    \input{recipes/chicken-tikka-masala.tex}
+    \input{recipes/lamb-curry.tex}
+    \input{recipes/saag-paneer.tex}
+
+\chapter{Italian}
+    \input{recipes/pasta-puttanesca.tex}
+
+\chapter{Seafood}
+    \input{recipes/jambalaya.tex}
+    \input{recipes/moroccan-shrimp.tex}
+    \input{recipes/pan-fried-whole-fish.tex}
+    \input{recipes/pan-roasted-swordfish-steaks.tex}
+    \input{recipes/seared-sea-bass.tex}
+    \input{recipes/whole-roasted-red-snapper.tex}
+
+\chapter{Sides}
+    \input{recipes/corn-pudding.tex}
+    \input{recipes/honey-balsamic-brussels-sprouts.tex}
+
+\chapter{Dessert}
+    \input{recipes/chocolate-lava-cake.tex}
+    \input{recipes/eggnog.tex}
+    \input{recipes/roll-cookies.tex}
+    \input{recipes/tiramisu.tex}
+
+\end{document}
