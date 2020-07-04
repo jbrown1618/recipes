@@ -1,15 +1,23 @@
-\newcommand{\Ingredients}[1]{
-    \subsection*{Ingredients}
+\newcommand{\NamedIngredients}[2]{
+    \subsection*{#1}
     \begin{itemize} 
-        #1 
+        #2
     \end{itemize}
 }
 
-\newcommand{\Directions}[1]{
-    \subsection*{Directions}
+\newcommand{\Ingredients}[1]{
+    \NamedIngredients{Ingredients}{#1}
+}
+
+\newcommand{\NamedDirections}[2]{
+    \subsection*{#1}
     \begin{enumerate} 
-        #1 
+        #2
     \end{enumerate}
+}
+
+\newcommand{\Directions}[1]{
+    \NamedDirections{Directions}{#1}
 }
 
 %
@@ -18,7 +26,7 @@
 % 3 - Ingredients
 % 4 - Directions
 %
-\newcommand{\recipe}[4]{
+\newcommand{\Recipe}[4]{
     \section*{ \hspace{-12pt} #1 {\hfill \normalsize \normalfont from #2}}
     \addcontentsline{toc}{section}{ \hspace{-6pt} #1 }
     
@@ -43,5 +51,6 @@
 \newcommand{\half}{\nicefrac{1}{2}\ }
 \newcommand{\third}{\nicefrac{1}{3}\ }
 \newcommand{\fourth}{\nicefrac{1}{4}\ }
+\newcommand{\quarter}{\fourth}
 \newcommand{\threefourths}{\nicefrac{3}{4}\ }
 \newcommand{\eighth}{\nicefrac{1}{8}\ }
