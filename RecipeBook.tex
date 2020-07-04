@@ -1,10 +1,16 @@
-\documentclass[oneside,10pt]{book}
+\documentclass[twoside, 10pt]{book}
 
-\usepackage[letterpaper, portrait, top=1in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage[paperwidth=10in, paperheight=10in, top=1.5in, bottom=1in, left=1in, right=1in]{geometry}
 \usepackage{parskip} % Disables indentation at paragraph breaks
 \usepackage{hyperref} % Enable hyperlinks for recipe sources
 \usepackage{palatino} % Prettier font
 \usepackage[]{units}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{sectsty}
+
+\raggedbottom
+\chapterfont{\centering}
 
 \input{recipe-utils.tex}
 
@@ -16,7 +22,11 @@
 \maketitle
 \tableofcontents{}
 
+\chapter*{Introduction}
+    \input{captions/introduction.tex}
+
 \chapter{Breakfast}
+    \input{captions/breakfast.tex}
     \input{recipes/breakfast-cookies.tex}
     \input{recipes/buttermilk-pancakes.tex}
     \input{recipes/crepes.tex}
@@ -24,18 +34,22 @@
     \input{recipes/green-smoothie.tex}
 
 \chapter{Asian}
+    \input{captions/asian.tex}
     \input{recipes/cumin-lamb.tex}
     \input{recipes/thai-red-curry.tex}
 
 \chapter{Indian}
+    \input{captions/indian.tex}
     \input{recipes/chicken-tikka-masala.tex}
     \input{recipes/lamb-curry.tex}
     \input{recipes/saag-paneer.tex}
 
 \chapter{Italian}
+    \input{captions/italian.tex}
     \input{recipes/pasta-puttanesca.tex}
 
 \chapter{Seafood}
+    \input{captions/seafood.tex}
     \input{recipes/jambalaya.tex}
     \input{recipes/moroccan-shrimp.tex}
     \input{recipes/pan-fried-whole-fish.tex}
@@ -44,10 +58,12 @@
     \input{recipes/whole-roasted-red-snapper.tex}
 
 \chapter{Sides}
+    \input{captions/sides.tex}
     \input{recipes/corn-pudding.tex}
     \input{recipes/honey-balsamic-brussels-sprouts.tex}
 
 \chapter{Dessert}
+    \input{captions/dessert.tex}
     \input{recipes/chocolate-lava-cake.tex}
     \input{recipes/eggnog.tex}
     \input{recipes/roll-cookies.tex}

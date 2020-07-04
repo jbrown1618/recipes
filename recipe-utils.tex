@@ -20,23 +20,49 @@
     \NamedDirections{Directions}{#1}
 }
 
-%
-% 1 - Name
-% 2 - Source
-% 3 - Ingredients
-% 4 - Directions
-%
-\newcommand{\Recipe}[4]{
+\newcommand{\Image}[1]{
+    \includegraphics[width=\textwidth]{img/#1.png}
+}
+
+\newcommand{\Caption}[1]{
+    \input{captions/#1.tex}
+}
+
+\newcommand{\Title}[2]{
     \section*{ \hspace{-12pt} #1 {\hfill \normalsize \normalfont from #2}}
     \addcontentsline{toc}{section}{ \hspace{-6pt} #1 }
-    
+}
+
+\newcommand{\PageSplit}[2]{
     \begin{minipage}[t]{0.35\textwidth}
-        #3
+        #1
     \end{minipage}
     \hspace{0.05\textwidth}
     \begin{minipage}[t]{0.6\textwidth}
-        #4
+        #2
     \end{minipage}
+}
+
+%
+% 1 - ID
+% 2 - Name
+% 3 - Source
+% 4 - Ingredients
+% 5 - Directions
+%
+\newcommand{\Recipe}[5]{
+    \pagebreak
+
+    \Title{#2}{#3}
+
+    \Image{#1}
+    
+    \pagebreak
+
+    \Caption{#1}
+    \vspace{1em}
+
+    \PageSplit{#4}{#5}
 }
 
 \newcommand{\tablespoon}{\unit{Tbsp}\ }
