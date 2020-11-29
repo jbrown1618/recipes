@@ -3,3 +3,6 @@
 *.out
 *.pdf
 *.toc
+*.fls
+*.fdb_latexmk
+*.gz
